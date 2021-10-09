@@ -1,4 +1,12 @@
 @import "./abstract/mixins";
 @import "./abstract/variables";
 
-@import "./base/typography"
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/layout";
+@import "./components/navbar";
+@import "./components/sections/about";
+@import "./components/sections/hero";
+@import "./components/sections/projects";
+@import "./components/sections/skills";
