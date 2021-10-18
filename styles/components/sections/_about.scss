@@ -1,7 +1,15 @@
 .about{
-   height: 100vh;
-   width:100%;
+   min-height: 100vh;
+   margin-top: -1em;
    span{
        color: $color-bright;
+   }
+   &__content{
+       &-info{
+           line-height: 1.5rem;
+       }
+       p:nth-child(3){
+        margin-top: 1rem;
+    }
    }
 }

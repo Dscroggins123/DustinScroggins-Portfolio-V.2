@@ -9,21 +9,18 @@
        margin-top: 1em;
        color: #687a80;
    }
+   &__content{
+      top:2em;
+   }
 
    &__background{
     position: absolute;
-    font-size: 20rem;
+    font-size: 22rem;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    font-family: "CC Up Up And Away";
-    color: #0d1a17b6;
-    span{
-        font-family: "CC Up Up And Away";
-        left:6rem;
-        top:7rem;
-        position: absolute;z-index: 1;
-    }
+    font-family: "Pauls SUPER Font";
+    color: #1324208c;
    }
    &__content{
        position: relative;

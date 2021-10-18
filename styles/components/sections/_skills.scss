@@ -1,0 +1,17 @@
+.skills {
+    height: 100vh;
+  &__content {
+    &-icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      svg {
+        height: 4em;
+        width: 4em;
+        margin:.5em 0;
+      }
+      svg:nth-child(3n){
+         background-color: black;
+      }
+    }
+  }
+}

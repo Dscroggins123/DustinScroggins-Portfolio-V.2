@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar__container">  
         <div className="navbar__container-overlay"></div>
-        <div className="navbar__container-logo">DS</div>
+        <div className="navbar__container-logo">D</div>
           <ul>
             <li>About</li>
             <li>Projects</li>
