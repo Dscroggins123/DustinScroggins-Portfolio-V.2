@@ -1,51 +1,81 @@
 .projects {
   min-height: 100vh;
-  margin: 0 0 4em 0;
-  
+  padding: 0 0 80px 0;
+
   &__content {
-    text-align: center;
-    margin: 3rem 0 0 0;
-    width: 100%;
-    
-    &-image{
-        border-radius: 3px;
-        position: relative;
-        overflow: scroll;
-        img {
-            border-radius: 3px;
-            min-height:20rem;
-            opacity: .3;
-          }
-          &-description {
-            position: absolute;
-            background-color: #0c2720b0;
-            height: 100%;
-            z-index: 1;
-            border-radius: 3px;
-            // p:nth-of-type(1){
-            //     margin-top: 1.6rem;
-            // }
-            // p:nth-of-type(2){
-            //     margin: 2.1rem 0;
-            // }
-            h2 {
-              color: $color-bright;
-            }
-            // &-stack{
-            //     list-style: none;
-            //     display: flex;
-            //     justify-content: space-evenly;
-            //     font-size: .8rem;
-            //     color:$color-text;
-            //     max-width: 100%;
-            //     li{
-            //         background-color: $color-primary;
-            //         border-radius: 2px;
-    
-            //     }
-            // }
-          }
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @include respond(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    &-card {
+      position: relative;
+      margin-bottom: 5rem;
+      height: 100%;
+      border-radius: 50rem;
+
+      &-image {
+        min-height: max(10vw, 15rem, 18rem);
+        border-radius: 0.4rem;
+        opacity: 0.33;
       }
-      
+      &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        background-color: #08162096;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.4rem;
+        position: absolute;
+        overflow: visible;
+        z-index: 9;
+        padding: 1.5rem 1rem;
+        box-shadow: 0px 2px 12px 0px #020608;
+        transition: transform 0.3s;
+        &-links {
+          display: flex;
+          justify-content: space-between;
+        }
+        &-links {
+          svg:hover {
+            fill: $color-bright;
+          }
+        }
+        svg {
+          fill: #65767b;
+          height: 24px;
+          width: 24px;
+        }
+        p:nth-of-type(1) {
+          color: $color-bright;
+          font-family: $font-header;
+        }
+        p:nth-of-type(2) {
+          color: $color-text;
+        }
+        h2 {
+          color: $color-text2;
+        }
+
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          color: $color-bright;
+          li {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+      &-description:hover {
+        box-shadow: 2px 5px 12px 0px #1f6283;
+      }
+    }
   }
 }

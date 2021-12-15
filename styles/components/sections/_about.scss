@@ -1,15 +1,40 @@
-.about{
-   min-height: 100vh;
-   margin-top: -1em;
-   span{
-       color: $color-bright;
-   }
-   &__content{
-       &-info{
-           line-height: 1.5rem;
-       }
-       p:nth-child(3){
-        margin-top: 1rem;
+.about {
+  min-height: 100vh;
+  padding: 0 0 60px 0;
+  span {
+    color: $color-bright;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    &-graphic{
+        max-width: 25rem;
     }
-   }
+    @include respond(medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      position: relative;
+      &-graphic {
+        SVG {
+        }
+      }
+    }
+    p:nth-child(2) {
+      margin-top: 1rem;
+    }
+    SVG {
+      height: 100%;  
+      width: 100%;
+    }
+  }
+}
+
+#Path_44 {
+  fill: $color-text2;
+}
+#Path_43,
+#Rectangle_5,
+#Rectangle_6 {
+  fill: $color-bright;
 }

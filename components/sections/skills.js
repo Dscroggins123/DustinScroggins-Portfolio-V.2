@@ -20,7 +20,7 @@ export default function Skills() {
   return (
     <div className="skills">
       <div className="skills__content">
-        <SectionLabel text="Skills."/>
+        <div className="skills__content-label"><SectionLabel text="Skills."/></div>
         <div className="skills__content-icons">
           <Bootstrap />
           <Javascript />

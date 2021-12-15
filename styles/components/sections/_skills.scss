@@ -1,16 +1,18 @@
 .skills {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 0 0 80px 0;
   &__content {
+    &-label{
+      transform: translateX(40%);
+    }
     &-icons {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      transform: translateX(10%);
       svg {
         height: 4em;
         width: 4em;
         margin:.5em 0;
-      }
-      svg:nth-child(3n){
-         background-color: black;
       }
     }
   }
