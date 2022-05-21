@@ -31,12 +31,11 @@ export default function Home() {
         },
         {
           autoAlpha: 1,
-          ease: "none",
           duration: 1,
           scrollTrigger: {
             trigger: el,
             start: "top center",
-            end: "bottom",
+            end: "bottom center",
             toggleActions: "play none none pause",
           },
         }
@@ -48,7 +47,7 @@ export default function Home() {
     <Layout>
       <div className="main">
         <Hero />
-        {sections.map((section) => (
+        {sections.map((section, i) => (
           <div ref={addToRefs}>{section}</div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import SectionLabel from "../single/section-label";
 import Computer from "../../assets/SVG/Computer";
+import ApiSVG from "../../assets/SVG/ApiSVG";
 
 export default function About() {
   return (
@@ -19,13 +20,24 @@ export default function About() {
             those that use them.
           </p>
           <p className="paragraph1">
-            <span >When I’m not improving my coding skills</span> or learning new
+            <span>When I’m not improving my coding skills</span> or learning new
             frameworks , I enjoy releasing my stress lifting heavy weights,
             watching sports and building my investment portfolio.
           </p>
         </div>
         <div className="about__content-graphic">
-          <Computer />
+          <div>
+            <Computer />
+          </div>
+          <div>
+            <ApiSVG />
+          </div>
+          <div>
+            <Computer />
+          </div>
+          <div>
+            <ApiSVG />
+          </div>
         </div>
       </div>
     </div>

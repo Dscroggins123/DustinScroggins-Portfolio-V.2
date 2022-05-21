@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import Github from "../assets/SVG/Github";
 import Linkedin from "../assets/SVG/Linkedin";
 import Burger from "../assets/SVG/Burger";
+import useRefresh from "../hooks/useRefresh";
 
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(false);
+  const setRefresh = useRefresh();
 
   const animateMenu = () => {
     setOpenNav(!openNav);
+    console.log(openNav);
   };
 
   useEffect(() => {
@@ -21,7 +24,7 @@ export default function Navbar() {
     window.onscroll = () => {
       window.scroll({
         top: scrollTop,
-        left: screenLeft,
+        left: scrollLeft,
       });
     };
   };
@@ -33,7 +36,12 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar__container">
         <div className="navbar__container-overlay"></div>
-        <div className="navbar__container-logo">D</div>
+        <div
+          className="navbar__container-logo"
+          onClick={() => setRefresh(true)}
+        >
+          D
+        </div>
         <ul className={openNav ? "open" : ""}>
           <li>I.&nbsp;&nbsp;About</li>
           <li>II.&nbsp;&nbsp;Projects</li>

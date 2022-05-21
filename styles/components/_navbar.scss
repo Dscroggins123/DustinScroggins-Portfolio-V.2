@@ -2,20 +2,25 @@
   svg {
     fill: #65767b;
   }
-  svg:hover{
- fill: $color-bright;
+  svg:hover {
+    fill: $color-bright;
   }
   &__container {
     display: flex;
     justify-content: space-between;
     padding: 2em 1.8em 0 1.8em;
+    @include respond(medium) {
+      padding: 2.5em 2em;
+    }
+    @include respond(large) {
+      padding: 3em 7em;
+    }
     &-overlay {
       display: none;
       position: fixed;
       z-index: 999;
       top: 0;
       width: 100%;
-      background-color: $color-primary;
     }
     &-logo {
       font-family: "Pauls SUPER Font";
@@ -24,8 +29,8 @@
       margin-top: -10px;
     }
     &-burger {
-      z-index:999;
-      margin-top: -.6em;
+      z-index: 999;
+      margin-top: -0.6em;
       #line1,
       #line2,
       #line3 {
@@ -45,11 +50,10 @@
         transition: transform 800ms ease;
         transform: translateX(0);
       }
-      
+
       svg {
         height: 3.5rem;
         width: 4rem;
-        
       }
       @include respond(medium) {
         display: none;
@@ -71,7 +75,6 @@
     transform: translateX(0);
   }
 
- 
   ul {
     display: flex;
     width: 50%;
@@ -79,7 +82,6 @@
       display: flex;
       li {
         margin-right: 1rem;
-
       }
     }
     @include respond(small) {
@@ -106,14 +108,13 @@
         position: relative;
         left: 20%;
       }
-      
     }
     @include respond(medium) {
       list-style-type: none;
       justify-content: space-between;
     }
   }
-  li:hover{
+  li:hover {
     color: $color-bright;
   }
 }

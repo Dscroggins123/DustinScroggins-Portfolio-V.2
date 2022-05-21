@@ -10,7 +10,7 @@
     color: #687a80;
   }
   &__content {
-    top: 3em;
+    top: 5em;
     position: relative;
     z-index: 1;
     span {
@@ -22,10 +22,12 @@
   &__background {
     position: absolute;
     font-size: 22rem;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Pauls SUPER Font";
-    color: #091d2c;
+    transform: translate(-50%);
+    SVG {
+      stroke: #0c273be3;
+      min-height: 40rem;
+      min-width: 100%;
+    }
   }
 }
