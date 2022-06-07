@@ -5,9 +5,8 @@ export default function Contact() {
   return (
     <div className="contact">
       <div className="contact-label">
-        <SectionLabel text="Contact Me ?" />
+        <SectionLabel text="Contact" />
       </div>
-
       <div className="contact__content">
         <p className="paragraph1">
           {" "}

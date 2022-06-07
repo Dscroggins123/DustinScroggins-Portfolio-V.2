@@ -1,6 +1,26 @@
 import SectionLabel from "../single/section-label";
 import Computer from "../../assets/SVG/Computer";
 import ApiSVG from "../../assets/SVG/ApiSVG";
+import UiSVG from "../../assets/SVG/UiSVG";
+
+const AboutTags = [
+  {
+    icon: <Computer />,
+    tag: "Frontend Development",
+  },
+  {
+    icon: <ApiSVG />,
+    tag: "Backend Development",
+  },
+  {
+    icon: <UiSVG />,
+    tag: "Modern UI/UX Design",
+  },
+  {
+    icon: <UiSVG />,
+    tag: "Modern UI/UX Design",
+  },
+];
 
 export default function About() {
   return (
@@ -26,18 +46,12 @@ export default function About() {
           </p>
         </div>
         <div className="about__content-graphic">
-          <div>
-            <Computer />
-          </div>
-          <div>
-            <ApiSVG />
-          </div>
-          <div>
-            <Computer />
-          </div>
-          <div>
-            <ApiSVG />
-          </div>
+          {AboutTags.map((el) => (
+            <div className="about__content-graphic--tag">
+              {el.icon}
+              <p> {el.tag} </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@
       padding: 2.5em 2em;
     }
     @include respond(large) {
-      padding: 3em 7em;
+      padding: 3em 5em;
     }
     &-overlay {
       display: none;
@@ -27,6 +27,12 @@
       color: $color-bright;
       font-size: 3em;
       margin-top: -10px;
+    }
+    &-social {
+      display: flex;
+      li {
+        margin-right: 0.75rem;
+      }
     }
     &-burger {
       z-index: 999;
@@ -78,12 +84,7 @@
   ul {
     display: flex;
     width: 50%;
-    span {
-      display: flex;
-      li {
-        margin-right: 1rem;
-      }
-    }
+
     @include respond(small) {
       top: 0;
       right: 0;

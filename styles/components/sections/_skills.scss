@@ -1,19 +1,53 @@
 .skills {
-  padding: 0 0 20px 0;
+  height: 100vh;
+  padding: 0 0 80px 0;
   max-width: 600px;
+  width: 100%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__content {
     &-label {
-      transform: translateX(40%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-10px);
     }
     &-icons {
+      padding: 50px 0 0 0;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 3rem;
-      svg {
-        height: 4em;
-        width: 4em;
-        margin: 0.5em 0;
+      &--image {
+        position: relative;
+        SVG {
+          height: 3.1rem;
+          width: 3.1rem;
+          margin: 1rem;
+          @include respond(medium) {
+            height: 4.5rem;
+            width: 4.5rem;
+          }
+        }
+      }
+      &--image:hover:before,
+      :active:before {
+        content: attr(data-tag);
+        height: 3.1rem;
+        @include respond(medium) {
+          height: 4.5rem;
+          width: 80px;
+        }
+        width: 70px;
+        text-align: center;
+        background-color: $color-primary;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        left: 10px;
+        top: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

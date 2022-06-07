@@ -32,7 +32,7 @@ const Loader = () => {
       delay: 1.5,
     });
     tl.to("#Logo", { stroke: "#0c273be3" });
-    tl.to(".loader", { opacity: 0, zIndex: -1, duration: 0.8 });
+    tl.to(".loader", { opacity: 0, zIndex: -1, duration: 0.4 });
   };
 
   return (

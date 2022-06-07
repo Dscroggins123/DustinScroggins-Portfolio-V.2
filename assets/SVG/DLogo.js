@@ -1,8 +1,8 @@
 const LogoD = () => {
   return (
     <svg
-      width="259"
-      height="209"
+      width="290"
+      height="270"
       viewBox="0 0 259 209"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

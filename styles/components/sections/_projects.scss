@@ -1,5 +1,141 @@
 .projects {
   min-height: 100vh;
-  padding: 0 0 80px 0;
+  padding: 0 0 90px 0;
+  margin: auto;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  &__content {
+    margin-top: 2rem;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &-card {
+      width: 100%;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(0px);
+      transition: 100ms ease;
+      @include respond(medium) {
+        margin-bottom: 6rem;
+      }
+      &-image {
+        display: block;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        @include respond(medium) {
+          filter: grayscale(50%);
+        }
+      }
+      &-image:hover {
+        @include respond(medium) {
+          filter: grayscale(0);
+        }
+      }
+      &-description {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(19, 31, 45, 0.896);
+        padding: 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 300px;
+        @include respond(medium) {
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          background-color: rgba(19, 31, 45, 0.903);
+          min-height: 400px;
+          flex-direction: row;
+          transition: 300ms ease-in;
+          &[data-clicked="true"] {
+            z-index: 1;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          }
+        }
+        ul {
+          width: 100%;
+          max-width: 400px;
+          list-style-type: none;
+          display: flex;
+          justify-content: space-around;
+          @include respond(medium) {
+            flex-direction: column;
+            color: $color-text2;
+            li {
+              margin: 0.5rem 0;
+            }
+          }
+          font-size: 0.9rem;
+          padding: 1rem 0;
+        }
+        SVG {
+          height: 24px;
+          width: 24px;
+          margin-right: 1rem;
+        }
+
+        &-top {
+          padding: 0 0 1rem 0;
+          @include respond(medium) {
+            padding: 0 1rem;
+          }
+          p {
+            color: $color-bright;
+          }
+          h2 {
+            font-size: 2rem;
+            color: $color-text2;
+          }
+        }
+
+        &-links {
+          display: flex;
+          :hover {
+            fill: #86b0ce;
+            cursor: pointer;
+          }
+        }
+      }
+      &-button {
+        padding: 0.8rem;
+        background-color: $color-primary;
+        color: $color-text2;
+        font-weight: bold;
+        border: solid 2px $color-bright;
+        border-right: none;
+        position: absolute;
+        top: 40%;
+        right: 0;
+        transition: 300ms;
+        display: none;
+        @include respond(medium) {
+          display: block;
+        }
+        &[data-clicked="true"] {
+          top: 0;
+          background: transparent;
+        }
+      }
+
+      &-button:hover {
+        background-color: $color-bright;
+      }
+    }
+
+    &-card:hover {
+      @include respond(medium) {
+        transform: translateY(-10px);
+      }
+    }
+  }
 }

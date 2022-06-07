@@ -47,7 +47,7 @@ export default function Navbar() {
           <li>II.&nbsp;&nbsp;Projects</li>
           <li>III.&nbsp;&nbsp;Skills</li>
           <li>IV.&nbsp;&nbsp;Contact</li>
-          <span>
+          <div className="navbar__container-social">
             <li>
               <a href="https://github.com/Dscroggins123" target="blank">
                 <Github />
@@ -58,7 +58,7 @@ export default function Navbar() {
                 <Linkedin />
               </a>
             </li>
-          </span>
+          </div>
         </ul>
         <div
           className={`navbar__container-burger ${openNav ? "clicked" : ""}`}

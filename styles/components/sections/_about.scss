@@ -1,7 +1,8 @@
 .about {
   min-height: 100vh;
-  padding: 0 0 60px 0;
-
+  padding: 0 0 110px 0;
+  margin: auto;
+  max-width: 1400px;
   span {
     color: $color-bright;
   }
@@ -13,19 +14,22 @@
       width: 100%;
     }
     &-graphic {
+      max-width: 550px;
       width: 100%;
+      height: fit-content;
       display: grid;
       gap: 2rem;
       grid-template-columns: 1fr 1fr;
+      align-items: start;
+      &--tag {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
     }
     @include respond(medium) {
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      position: relative;
-      &-graphic {
-        SVG {
-        }
-      }
+      grid-template-columns: 50% 47%;
+      gap: 1.5rem;
     }
     p:nth-child(2) {
       margin-top: 1rem;
@@ -37,11 +41,16 @@
   }
 }
 
-#Path_44 {
-  fill: $color-text2;
-}
 #Path_43,
 #Rectangle_5,
 #Rectangle_6 {
   fill: $color-bright;
+}
+#Path_44 {
+  fill: $color-text;
+}
+#Group_5:hover {
+  #Path_44 {
+    fill: $color-text2;
+  }
 }

@@ -1,3 +1,20 @@
-.layout{
-     color: $color-text;
+.layout {
+  color: $color-text;
+  position: relative;
+
+  &__scrollUp {
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1rem;
+    fill: rgba(255, 255, 255, 0.706);
+    cursor: pointer;
+    @include respond(small) {
+      display: none;
+    }
+  }
+  &__scrollUp:hover {
+    fill: $color-bright;
+  }
 }
